@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-//import * as homeActions from '../../actions/homeActions';
+import * as homeActions from '../../actions/homeAction';
 
 class Home extends Component {
     render() {
