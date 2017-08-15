@@ -1,7 +1,9 @@
 import React, { PropTypes, Component } from 'react';
 import {
     Text,
-    View
+    View,
+    TextInput,
+    Button
 } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -12,6 +14,7 @@ class FirstScreen extends Component {
         return(
             <View style={styles.container}>
                 <Text>First Screen Content</Text>
+                <TextInput title="What time did you go to sleep at"></TextInput>
             </View>
         )
     }

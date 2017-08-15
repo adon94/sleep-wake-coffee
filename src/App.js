@@ -8,27 +8,27 @@ const store = configureStore();
 
 registerScreens(store, Provider);
 
-const navigatorStyle = {
-	statusBarColor: 'black',
-	statusBarTextColorScheme: 'light',
-	navigationBarColor: 'black',
-	navBarBackgroundColor: '#0a0a0a',
-	navBarTextColor: 'white',
-	navBarButtonColor: 'white',
-	tabBarButtonColor: 'red',
-	tabBarSelectedButtonColor: 'red',
-	tabBarBackgroundColor: 'white',
-	topBarElevationShadowEnabled: false,
-	navBarHideOnScroll: true,
-	tabBarHidden: false,
-	drawUnderTabBar: true
-};
+// const navigatorStyle = {
+// 	statusBarColor: 'black',
+// 	statusBarTextColorScheme: 'light',
+// 	navigationBarColor: 'black',
+// 	navBarBackgroundColor: '#0a0a0a',
+// 	navBarTextColor: 'white',
+// 	navBarButtonColor: 'white',
+// 	tabBarButtonColor: 'red',
+// 	tabBarSelectedButtonColor: 'red',
+// 	tabBarBackgroundColor: 'white',
+// 	topBarElevationShadowEnabled: false,
+// 	navBarHideOnScroll: true,
+// 	tabBarHidden: false,
+// 	drawUnderTabBar: true
+// };
 
 Navigation.startSingleScreenApp({
 	screen: {
 		screen: 'app.Home',
 		title: 'Sample App',
-		navigatorStyle:navigatorStyle,
+		// navigatorStyle:navigatorStyle,
 		leftButtons: [
 			{
 				id: 'sideMenu'
@@ -46,7 +46,7 @@ Navigation.startSingleScreenApp({
 Navigation.startTabBasedApp({
 	tabs: [
 		{
-			label: 'One', // tab label as appears under the icon in iOS (optional)
+			label: 'Home', // tab label as appears under the icon in iOS (optional)
 			screen: 'app.Home', // unique ID registered with Navigation.registerScreen
 			icon: require('../src/assets/homeicon.png'), // local image asset for the tab icon unselected state (optional on iOS)
 			selectedIcon: require('../src/assets/homeicon.png'), // local image asset for the tab icon selected state (optional, iOS only. On Android, Use `tabBarSelectedButtonColor` instead)
@@ -56,17 +56,17 @@ Navigation.startTabBasedApp({
 				bottom: -6, // optional, default is 0.
 				right: 0 // optional, default is 0.
 			},
-			title: 'Screen One', // title of the screen as appears in the nav bar (optional)
-			navigatorStyle: navigatorStyle, // override the navigator style for the tab screen, see "Styling the navigator" below (optional),
+			title: 'Home Screen', // title of the screen as appears in the nav bar (optional)
+			// navigatorStyle: navigatorStyle, // override the navigator style for the tab screen, see "Styling the navigator" below (optional),
 			navigatorButtons: {} // override the nav buttons for the tab screen, see "Adding buttons to the navigator" below (optional)
 		},
 		{
-			label: 'Two',
-			screen: 'app.Home',
+			label: 'Stats',
+			screen: 'app.FirstScreen',
 			icon: require('../src/assets/homeicon.png'),
 			selectedIcon: require('../src/assets/homeicon.png'),
-			navigatorStyle: navigatorStyle, // override the navigator style for the tab screen, see "Styling the navigator" below (optional)
-			title: 'Screen Two'
+			// navigatorStyle: navigatorStyle, // override the navigator style for the tab screen, see "Styling the navigator" below (optional)
+			title: 'Stats'
 		}
 	],
 	tabsStyle: { // optional, add this if you want to style the tab bar beyond the defaults
