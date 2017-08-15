@@ -1,0 +1,1 @@
+export const RETRIEVE_NEW_DAY = 'RETRIEVE_NEW_DAY'
